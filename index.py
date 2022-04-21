@@ -7,7 +7,7 @@ app = Flask(__name__)
 def test():
     return "Home Page"
 
-@app.route('/test/about/')
+@app.route('/test/About/')
 def about_test():
     return "About Page"
 
@@ -16,10 +16,10 @@ def about_test():
 def home():
     return render_template("home.html")
 
-@app.route('/about', strict_slashes=False)
-def about():
-    return render_template("about.html")
+@app.route('/About', strict_slashes=False)
+def About():
+    return render_template("About.html")
 
 # Make sure this we are executing this file
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
